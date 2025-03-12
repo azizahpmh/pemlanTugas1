@@ -1,0 +1,68 @@
+package Tugas1Pratikum;
+
+import java.util.Scanner;
+
+public class MainMobil {
+    public static void main(String[] args) {
+        Scanner wedew = new Scanner(System.in);
+
+        System.out.println("Masukkan data mobil m1");
+        Mobil m1 = new Mobil();
+        
+        System.out.println("Masukkan Manufaktur: ");
+        m1.setManufaktur(wedew.nextLine());
+
+        System.out.println("Masukkan Warna: ");
+        m1.setWarna(wedew.nextLine());
+
+        System.out.println("Masukkan Nomor Plat: ");
+        m1.setNoPlat(wedew.nextLine());
+
+        System.out.println("Masukkan Kecepatan (km/jam): ");
+        m1.setKecepatan(wedew.nextInt());
+
+        System.out.println("Masukkan Waktu Tempuh (jam): ");
+        m1.setWaktu(wedew.nextDouble());
+        wedew.nextLine();
+
+        System.out.println("\nData Mobil m1: ");
+        m1.displayMessage();
+        System.out.println("===============");
+
+        System.out.println("Masukkan Data Mobil m2");
+        Mobil m2 = new Mobil();
+
+        System.out.println("Masukkan Manufaktur: ");
+        m2.setManufaktur(wedew.nextLine());
+
+        System.out.println("Masukkan Warna: ");
+        m2.setWarna(wedew.nextLine());
+
+        System.out.println("Masukkan Nomor Plat: ");
+        m2.setNoPlat(wedew.nextLine());
+
+        System.out.println("Masukkan Kecepatan (km/jam): ");
+        m2.setKecepatan(wedew.nextInt());
+        wedew.nextLine();
+
+        System.out.println("Masukkan Waktu Tempuh (jam): ");
+        m2.setWaktu(wedew.nextDouble());
+        wedew.nextLine();
+
+        System.out.println("\nData Mobil m2: ");
+        m2.displayMessage(); 
+
+        System.out.println();
+        System.out.println("Apakah ingin mengubah warna mobil m1? (ya/tidak): ");
+        String pilihan = wedew.nextLine();
+
+        if (pilihan.equalsIgnoreCase("ya")) {
+            System.out.print("Masukkan warna baru untuk mobil m1: ");
+            m1.setWarna(wedew.nextLine());
+
+            System.out.println("\nData mobil m1 setelah perubahan warna: ");
+            m1.displayMessage();
+        }
+        System.out.println("Program selesai.");
+    }
+}
